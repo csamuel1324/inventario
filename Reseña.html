@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reseña</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .reseña-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      max-height: 200px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .volver-btn {
+      margin-top: 40px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .volver-btn:hover {
+      background: #0056b3;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Reseña del Sistema</h1>
+
+  <div class="reseña-container">
+    <!-- Cuadro de texto 1 -->
+    <div class="card">
+      <p>Este sistema de inventario permite gestionar productos, categorías, usuarios y despachos de forma eficiente. Es ideal para pequeñas y medianas empresas.</p>
+    </div>
+
+    <!-- Cuadro de texto 2 -->
+    <div class="card">
+      <p>El diseño moderno y la facilidad de navegación permiten al usuario centrarse en sus tareas sin complicaciones técnicas.</p>
+    </div>
+
+    <!-- Cuadro de imagen 1 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200.png?text=Inventario+1" alt="Imagen reseña 1">
+    </div>
+
+    <!-- Cuadro de imagen 2 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200.png?text=Inventario+2" alt="Imagen reseña 2">
+    </div>
+  </div>
+
+  <a href="index.php" class="volver-btn">Volver al login</a>
+
+</body>
+</html>
